@@ -1249,7 +1249,14 @@ nav #menu li a:hover{
         font-size: 12px;
     }
 }
-
+@media (max-width:330px){
+    .block{
+        padding: 50px;
+    }
+    .block a{
+        font-size: 15px;
+    }
+}
 @media(max-width: 1200px) {
     .toggle {
           visibility: visible;
