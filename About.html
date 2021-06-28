@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Cannondale</title>
+      <link rel="stylesheet" href="cycle.css">
+      <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap');
+
+
+body{
+    scroll-behavior: smooth;
+    background-color: black;
+}
+
+nav{
+    height: 10vh;
+    border-bottom: 1px solid #808080;
+}
+.tabs {
+    margin:  0;
+    padding: 0;
+    list-style: none;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+    .tabs__item {
+        width: 100%;
+        float: left;
+    }
+
+        .tabs__item {
+          display: table-cell;
+          float: none;
+          width: auto;
+        }
+
+        .tabs__link {
+            display: block;
+        }
+
+
+.primary-nav {
+    text-align: center;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.primary-nav a {
+    padding: 3em 0em;
+    color: #808080;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: .1rem;
+    font-weight: 600;
+}
+.primary-nav a:hover{
+    color: white;
+}
+
+.primary-nav a span {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+.aboutt-container{
+    margin: 10% 20%;
+}
+
+p{
+    color: red;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+h1{
+    color: white;
+    font-size: 35px;
+    font-family: 'Arimo', sans-serif;
+    line-height: 5rem
+}
+h2{
+    color: white;
+    margin: 4% 0%;
+    width: 70%;
+    font-size: 22px;
+    font-family: 'Arimo', sans-serif;
+}
+h3{
+    padding: 1rem 0rem;
+    color: rgba(119, 116, 116, 0.705);
+    width: 75%;
+    font-size: 20px;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 100;
+}
+img{
+    width: 70%;
+}
+
+.details-container{
+    background-color: white;
+    width: 100%;
+    margin-left: 0%;
+}
+
+.detail{
+    padding: 6.3rem;
+}
+
+
+.footer-section h1{
+    color:white;
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 20px;
+    line-height: 6rem;
+    letter-spacing: .2rem;
+}
+@media(max-width:1500px) {
+    nav #menu li {
+        padding: 0px 60px;
+    }
+    .details-container{
+        margin: 0% 12%;
+    }
+}
+
+@media(max-width: 1200px) {
+    nav #brand {
+        display: block;
+    }
+    .header {
+        width: 90%;
+        position: absolute;
+        top: 96%;
+        left: 50%;
+    }
+    .header h1{
+        font-size: 70px;
+        letter-spacing: 3rem;
+    }
+    .brand-container{
+        width: 100%;
+    }
+    .bike{
+        width: 80%;
+        position: absolute;
+        left: 50%;
+        top: 60%;
+     }
+    .brand-header{
+        width: 100%;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+    }
+    .brand1, .brand2{
+        font-size: 90px;
+    }
+    .card-container{
+        position: absolute;
+        top: 70%;
+        left: 20%;
+        width: 42%; 
+    } 
+    .card{
+        padding: .8rem;
+    }
+    .card h1{
+        font-size: 18px;
+    }
+    .card h2{
+        font-size: 18px;
+    }
+    .card h3{
+        font-size: 13px;
+    }
+
+    .about-container{
+        width: 100%;
+        overflow: hidden;
+    }
+    .about1-img{
+         width: 60%;
+         margin-left: 20%;
+    }
+    .about1 h1{
+        color: rgb(141, 140, 140);
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        width: 60%;
+        margin-left: 25%;
+    }
+    
+    .about2-img{
+        width: 60%;
+        margin-left: 20%;
+        padding: 10% 0%;
+    }
+    .about2 h1{
+        color: rgb(141, 140, 140);
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        width: 60%;
+        margin-left: 25%;
+    }
+    .about3-img{
+        width: 60%;
+        margin-left: 20%;
+        padding: 10% 0%;
+    }
+    .about3 h1{
+        color: rgb(141, 140, 140);
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        width: 60%;
+        margin-left: 25%;
+    }
+    .cycle-container{
+        width: 100%;
+    }
+    .cycles img{
+        width: 90%;
+    }
+
+    .cycle-heading h1{
+        font-size: 25px;
+        line-height: 2rem;
+    }
+    .cycle-heading  h2{
+        font-size: 25px;
+        line-height: 3rem;
+    }
+    .cycle-heading a{
+        font-size: 18px;
+        line-height: 1rem;
+    }
+    .cycle .cycle-heading{
+        position: absolute;
+        top: 10%;
+        left: 25%;
+    }
+    .cycle1 .cycle-heading{
+        position: absolute;
+        top: 32%;
+        left: 78%;
+    }
+    .cycle2 .cycle-heading{
+        position: absolute;
+        top: 53%;
+        left: 25%;
+    }
+    .cycle3 .cycle-heading{
+        position: absolute;
+        top: 78%;
+        left: 78%;
+    }
+    .school-container{
+        width: 100%;
+    }
+    .block h1{
+        font-size: 40px;
+        width: 110%;
+    }
+    .action-container{
+        width: 90%;
+    }
+    .horz-containerr svg{
+        width: 12%;
+        height: 20%;
+    }   
+    .action-heading{
+        font-size: 38px;
+        width: 80%;
+    }
+    .content {
+        font-size: 15px;
+        line-height: 1.5rem;
+    }
+    .content .ptn{
+        font-size: 12px;
+    }
+    .rating-container{
+        width: 100%;
+        margin-left: -8%;
+    }
+    .rating-container h1{
+        width: 55%;
+        font-size: 18px;
+    }
+    .rating-container p{
+        width: 50%;
+        font-size: 15px;
+    }
+    .logo-slider .item{
+        background-color: black;
+        border-radius: 8px;
+        padding: 100px;
+    }
+
+    .select-left{
+        padding: 0rem;
+    }
+    .select-left img{
+        width: 100%;
+    }
+    .select-right{
+        padding: 5rem;
+    }
+    .select-right h1{
+        width: 100%;
+        font-size: 25px;
+    }
+    .select-right a{
+        line-height: 4rem;
+        font-size: 20px;
+    }
+    .details-container{
+        width: 100%;
+        margin: 5% 0%;
+    }
+    .detail{
+        width: 100%;
+        padding: 0rem;
+        line-height: 3rem;
+        text-align: center;
+    }
+    .detail h1{
+        color: black;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+    }
+    .detail a{
+        font-size: 12px;
+    }
+    .footer {
+        width: 80%;
+    }
+    .footer-content{
+        padding: 0px 0px;
+        width: 120%;
+    }
+    .footer-section:nth-child(2){
+        margin-left: 3%;
+    }
+    .footer-section:nth-child(3){
+        margin-left: 3%;
+    }
+    .footer-section:nth-child(4){
+        margin-left: 3%;
+    }
+    .footer-section:nth-child(5){
+        margin-left: 3%;
+    }
+    .footer-section h1{
+        font-size: 16px;
+        line-height: 3rem;
+    }
+    .footer-section h2{
+        line-height: 2rem;
+        font-size: 12px;
+        width: 100%;
+    }  
+    .footer-section h3 {
+        width: 100%;
+        font-size: 15px;
+        line-height: 2rem;
+    }
+    .footer-section li {
+        line-height: 2rem;
+    }
+    .footer-section li a{
+        font-size: 15px;
+        width: 100%;
+    }
+    .footer-bottom{
+        margin-top: 4%;
+    }
+    .footer-bottom h1{
+        font-size: 10px;
+    }
+    .footer-bottom h1 span{
+        font-size: 10px;
+    }
+}
+
+
+
+@media (max-width:600px){
+    .aboutt-container{
+        margin: 20% 10%;
+    }
+    p{
+        line-height: 3rem;
+    }
+    h1{
+        font-size: 24px;
+        line-height: 2rem;
+    }
+    h2{
+        width: 100%;
+        font-size: 18px;
+    }
+    h3{
+        width: 100%;
+    }
+    img{
+        width: 100%;
+    }
+    .details-container{
+        width: 60%;
+    }
+    .details{
+        display: block;
+    }
+    .detail{
+        width: 80%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+        border-right: 0px solid rgba(0, 0, 0, 0.178);
+        line-height: 3rem;
+        text-align: center;
+    }
+    .detail h1{
+        color: black;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+    }
+}
+
+</style>
+
+<body>
+
+    <section id="nav">
+        <nav class="nav-collapse">
+            <ul class="tabs primary-nav">
+                <li class="tabs__item">
+                    <a href="#" class="tabs__link">About</a>
+                </li>
+                <li class="tabs__item">
+                    <a href="#" class="tabs__link">Bikes</a>
+                </li>
+                <li class="tabs__item">
+                    <a href="#" class="tabs__link">Inspiration</a>
+                </li>
+                <li class="tabs__item">
+                    <a href="#" class="tabs__link"><span>Galaxy Bikes</span></a>
+                </li>
+                <li class="tabs__item">
+                    <a href="#" class="tabs__link">Basket</a>
+                </li>
+                <li class="tabs__item">
+                    <a href="#" class="tabs__link">Service</a>
+                </li>
+                <li class="tabs__item">
+                    <a href="#" class="tabs__link">Account</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+  
+
+    <section id="about">
+        <div class="aboutt-container">
+            <p>Innovation with a history</p>
+            <h1>Star Bicycle is pedaling with Cannondale</h1>
+            <img src="cycle1.jpeg" alt="">
+            <h2>Hardly any other bike brand has set as many trends in the last 40 years as Cannondale. Even today, the US brand impresses with an innovative and wide range. That's why we decided to start the 2021 season with Cannondale in the Star Bicycle Shop.</h2>
+            <h3>Whether mountain bike, racing bike, gravel bike, electric bike, city bike, e-mountain bike or children's bike: Cannondale is at the forefront in all bike categories. As different as the different bikes are, they all have in common that they are exceptionally light, beautiful and well thought out.</h3>
+            <h3>These three features have been in the brand's DNA since the first models. As early as the early 1980s, Cannondale consistently built frames out of aluminum, when most of the major manufacturers only used steel. This made Cannondale bikes not only lighter, but also more stable than the competition. When this followed suit, Cannondale was already working with carbon.</h3>
+            <h3>Success also came because the Cannondale bikes looked incredibly good from the start. Older mountain bikers and racing cyclists still remember the almost invisible weld seams and finely polished pipe transitions. Cannondale cultivated this optical quality long before it gained a majority thanks to carbon.</h3>
+            <h3>When it comes to equipment, too, Cannondale wanted to offer its customers the best. If this didn't exist, the brand quickly invented it itself. This is how legendary parts such as the sensitive and stable Headshok suspension fork, the strong, easily adjustable Force40 brakes or the light and stiff bottom bracket standard PF30 were created. Cannondale didn't shy away from any. Expenditure. She also dared to go new, unfamiliar ways. The brand still does that today. Examples of this are the first gravel bikes built in large series or the unique suspension forks with in-house technology for these.</h3>                  
+            <h3>All of this made us want to work with Cannondale. We have found each other because we share with the brand the joy of technical perfection from which racing drivers benefit as much as hobby athletes and bicycle commuters. From the 2021 season, Cannondale bikes will round off our range. Various racing bikes, gravel bikes, electric bikes, mountain bikes, urban bikes and children's bikes have already arrived. You can find these presented here on the website, and you can now view, try out and buy them in our shop in Winterthur!</h3>
+        </div>
+    </section>
+
+    <section id="details">
+        <div class="details-container">
+              <div class="details">
+                    <div class="detail">
+                          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                          width="50" height="50"
+                          viewBox="0 0 172 172"
+                          style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#cccccc"><path d="M48.16,25.81008c-2.6446,0 -5.28848,1.00528 -7.29656,3.01336c-1.73072,1.73073 -3.70885,3.73993 -5.22719,5.29102c-1.80184,1.83876 -3.16579,4.05779 -3.9943,6.49367c-0.00138,0.00396 -1.35217,3.95894 -2.71438,7.94156c-0.68145,1.99232 -1.36785,3.99141 -1.88461,5.50266c-0.51616,1.50949 -0.80538,2.35573 -0.88352,2.59008c-0.47777,1.42644 -0.48147,2.98247 0.0168,4.4243c0,0.00112 0,0.00224 0,0.00336c4.51478,13.03956 16.62246,33.61082 33.88266,50.87102c0.04164,0.0414 0.08537,0.08065 0.13102,0.11758c17.23401,17.19264 37.73242,29.26137 50.74,33.76508c1.44448,0.50143 3.00278,0.49398 4.42765,0.0168c0.23434,-0.07814 1.08058,-0.36736 2.59008,-0.88352c1.51125,-0.51676 3.51033,-1.20316 5.50266,-1.88461c3.98262,-1.36221 7.93754,-2.713 7.94156,-2.71438l0.00336,-0.00336c2.43206,-0.82859 4.65224,-2.18978 6.49031,-3.99094c1.55109,-1.51834 3.56029,-3.49646 5.29102,-5.22719c4.01616,-4.01616 4.01616,-10.57697 0,-14.59313l-15.48,-15.48c-4.01521,-4.01501 -10.57879,-4.01639 -14.59313,0c-2.03049,2.0303 -9.43271,9.47797 -15.38594,15.46656c-8.8082,-4.52989 -18.25826,-9.67346 -25.41367,-16.83047c-0.00112,0 -0.00224,0 -0.00336,0c-7.15545,-7.15553 -12.30052,-16.60896 -16.83047,-25.41703c5.98859,-5.95323 13.4362,-13.35558 15.46656,-15.38594c4.01568,-4.01568 4.01481,-10.57813 0,-14.59313v-0.00336l-15.48,-15.47664c-2.00808,-2.008 -4.65196,-3.01336 -7.29656,-3.01336zM48.16,29.22656c1.75688,0 3.51329,0.67798 4.86438,2.02906l15.48,15.48c2.70145,2.70007 2.70195,7.0268 0,9.72875c-0.14513,0.14513 -0.91744,0.91114 -1.11531,1.10859l-12.60102,-12.60102c-0.16204,-0.16747 -0.38509,-0.26203 -0.61812,-0.26203c-0.3504,0.00007 -0.66573,0.21271 -0.79714,0.53754c-0.13141,0.32483 -0.05262,0.6969 0.19917,0.94059l12.59766,12.59765c-3.14734,3.13668 -8.76645,8.72688 -14.04219,13.97164c-0.53018,0.52713 -0.65917,1.33635 -0.31914,2.00219c4.67902,9.14262 10.11359,19.42578 18.06,27.37219c7.94653,7.94831 18.22971,13.38105 27.37219,18.06c0.66583,0.34002 1.47506,0.21104 2.00219,-0.31914c6.11648,-6.1526 14.16101,-14.245 16.29297,-16.37695c2.69986,-2.70124 7.02889,-2.70124 9.72875,0l15.48,15.48c2.70216,2.70216 2.70216,7.02659 0,9.72875c-0.36472,0.36472 -0.73519,0.72429 -1.11867,1.10523l-12.59765,-12.59766c-0.16204,-0.16747 -0.38509,-0.26203 -0.61813,-0.26203c-0.3504,0.00007 -0.66573,0.21271 -0.79714,0.53754c-0.13141,0.32483 -0.05262,0.6969 0.19917,0.94059l12.59094,12.59094c-1.01241,1.00027 -2.06514,2.04629 -2.92266,2.8857c0,0.00112 0,0.00224 0,0.00336c-1.46969,1.44066 -3.24567,2.5272 -5.19695,3.1914c0,0 -3.96373,1.35823 -7.94828,2.7211c-1.99227,0.68143 -3.98824,1.36456 -5.4993,1.88125c-1.51106,0.51669 -2.71281,0.92443 -2.56992,0.8768c-0.00112,0 -0.00224,0 -0.00336,0c-0.72168,0.24172 -1.48792,0.24176 -2.20375,-0.00672c-0.00112,0 -0.00224,0 -0.00336,0c-12.28556,-4.25387 -32.70649,-16.20524 -49.56422,-33.06297c-16.85773,-16.85773 -28.80919,-37.2785 -33.06297,-49.56422c-0.24827,-0.7185 -0.24792,-1.48699 -0.00672,-2.20711c0,-0.00112 0,-0.00224 0,-0.00336c-0.04763,0.1429 0.3601,-1.05886 0.8768,-2.56992c0.51669,-1.51106 1.19982,-3.50702 1.88125,-5.4993c1.36287,-3.98455 2.7211,-7.94828 2.7211,-7.94828c0.66414,-1.95264 1.75033,-3.72684 3.1914,-5.19695c0.00112,0 0.00224,0 0.00336,0c1.5123,-1.54491 3.48415,-3.54798 5.20031,-5.26414c1.35099,-1.351 3.1075,-2.02906 4.86437,-2.02906zM47.28992,37.82992c-0.3504,0.00007 -0.66573,0.21271 -0.79714,0.53754c-0.13141,0.32483 -0.05262,0.6969 0.19917,0.94059l3.44,3.44c0.21571,0.22464 0.536,0.31512 0.83737,0.23655c0.30136,-0.07857 0.53671,-0.31392 0.61528,-0.61528c0.07857,-0.30136 -0.01191,-0.62166 -0.23655,-0.83737l-3.44,-3.44c-0.16204,-0.16747 -0.38509,-0.26203 -0.61812,-0.26203zM119.52992,110.06992c-0.3504,0.00007 -0.66573,0.21271 -0.79714,0.53754c-0.13141,0.32483 -0.05262,0.6969 0.19917,0.94059l3.44,3.44c0.21571,0.22464 0.536,0.31512 0.83737,0.23655c0.30136,-0.07857 0.53671,-0.31392 0.61528,-0.61528c0.07857,-0.30136 -0.01191,-0.62166 -0.23655,-0.83737l-3.44,-3.44c-0.16204,-0.16747 -0.38509,-0.26203 -0.61812,-0.26203z"></path></g></g></svg>
+                          <h1>Telephone help</h1>
+                          <a href="">Call now</a>
+                          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                          width="40" height="20"
+                          viewBox="0 -50 172 172"
+                          style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#000000"><path d="M14.33333,93.16667h126.033l-23.59983,23.59983c-2.79858,2.79858 -2.79858,7.33508 0,10.13367c1.40108,1.40108 3.23217,2.09983 5.06683,2.09983c1.83467,0 3.66575,-0.69875 5.06683,-2.09983l35.83333,-35.83333c1.34375,-1.34017 2.09983,-3.16408 2.09983,-5.06683c0,-1.90275 -0.75608,-3.72308 -2.09983,-5.06683l-35.83333,-35.83333c-2.79858,-2.79858 -7.33508,-2.79858 -10.13367,0c-2.79858,2.79858 -2.79858,7.33508 0,10.13367l23.59983,23.59983h-126.033c-3.956,0 -7.16667,3.21067 -7.16667,7.16667c0,3.956 3.21067,7.16667 7.16667,7.16667z"></path></g></g></svg>
+                    </div>
+                    <div class="detail">
+                          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                          width="50" height="50"
+                          viewBox="0 0 172 172"
+                          style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#cccccc"><path d="M48.16,13.76c-18.95899,0 -34.4,15.44101 -34.4,34.4v75.68c0,18.95899 15.44101,34.4 34.4,34.4h75.68c18.95899,0 34.4,-15.44101 34.4,-34.4v-75.68c0,-18.95899 -15.44101,-34.4 -34.4,-34.4zM48.16,20.64h75.68c15.24149,0 27.52,12.27851 27.52,27.52v75.68c0,15.24149 -12.27851,27.52 -27.52,27.52h-75.68c-15.24149,0 -27.52,-12.27851 -27.52,-27.52v-75.68c0,-15.24149 12.27851,-27.52 27.52,-27.52zM44.72,51.6c-5.6587,0 -10.32,4.6613 -10.32,10.32v48.16c0,5.6587 4.6613,10.32 10.32,10.32h82.56c5.6587,0 10.32,-4.6613 10.32,-10.32v-48.16c0,-5.6587 -4.6613,-10.32 -10.32,-10.32zM46.14437,58.48h79.70453l-30.6375,30.59047c-5.13521,5.127 -13.3503,5.12643 -18.48328,-0.00672zM130.72,63.33765v45.32469l-22.69594,-22.66235zM41.28,63.34437l22.65563,22.65563l-22.65563,22.65563zM103.15969,90.85765l22.69594,22.66235h-79.71125l22.65563,-22.65563l3.06375,3.06375c7.76013,7.76013 20.44052,7.76582 28.20531,0.01344z"></path></g></g></svg>
+                          <h1>Contact by E-Mail</h1>
+                          <a href="">Write now</a>
+                          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                          width="40" height="20"
+                          viewBox="0 -50 172 172"
+                          style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#000000"><path d="M14.33333,93.16667h126.033l-23.59983,23.59983c-2.79858,2.79858 -2.79858,7.33508 0,10.13367c1.40108,1.40108 3.23217,2.09983 5.06683,2.09983c1.83467,0 3.66575,-0.69875 5.06683,-2.09983l35.83333,-35.83333c1.34375,-1.34017 2.09983,-3.16408 2.09983,-5.06683c0,-1.90275 -0.75608,-3.72308 -2.09983,-5.06683l-35.83333,-35.83333c-2.79858,-2.79858 -7.33508,-2.79858 -10.13367,0c-2.79858,2.79858 -2.79858,7.33508 0,10.13367l23.59983,23.59983h-126.033c-3.956,0 -7.16667,3.21067 -7.16667,7.16667c0,3.956 3.21067,7.16667 7.16667,7.16667z"></path></g></g></svg> 
+                    </div>
+                    <div class="detail">
+                          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                          width="50" height="50"
+                          viewBox="0 0 172 172"
+                          style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#cccccc"><path d="M86,14.33333c-27.70633,0 -50.16667,22.46033 -50.16667,50.16667c0,35.83333 50.16667,93.16667 50.16667,93.16667c0,0 50.16667,-57.33333 50.16667,-93.16667c0,-27.70633 -22.46033,-50.16667 -50.16667,-50.16667zM86,82.41667c-9.89717,0 -17.91667,-8.0195 -17.91667,-17.91667c0,-9.89717 8.0195,-17.91667 17.91667,-17.91667c9.89717,0 17.91667,8.0195 17.91667,17.91667c0,9.89717 -8.0195,17.91667 -17.91667,17.91667z"></path></g></g></svg>
+                          <h1>On-site consultation</h1>
+                          <a href="">Show route</a>
+                          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                          width="40" height="20"
+                          viewBox="0 -50 172 172"
+                          style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#000000"><path d="M14.33333,93.16667h126.033l-23.59983,23.59983c-2.79858,2.79858 -2.79858,7.33508 0,10.13367c1.40108,1.40108 3.23217,2.09983 5.06683,2.09983c1.83467,0 3.66575,-0.69875 5.06683,-2.09983l35.83333,-35.83333c1.34375,-1.34017 2.09983,-3.16408 2.09983,-5.06683c0,-1.90275 -0.75608,-3.72308 -2.09983,-5.06683l-35.83333,-35.83333c-2.79858,-2.79858 -7.33508,-2.79858 -10.13367,0c-2.79858,2.79858 -2.79858,7.33508 0,10.13367l23.59983,23.59983h-126.033c-3.956,0 -7.16667,3.21067 -7.16667,7.16667c0,3.956 3.21067,7.16667 7.16667,7.16667z"></path></g></g></svg> 
+                    </div>
+                    <div class="detail">
+                          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                          width="50" height="50"
+                          viewBox="0 0 172 172"
+                          style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#cccccc"><path d="M21.5,21.5v86h21.5v21.5h21.5v27.30542l34.13965,-27.30542h51.86035v-5.375v-80.625h-21.5v-21.5zM32.25,32.25h86v10.75h-75.25v53.75h-10.75zM53.75,53.75h86v64.5h-44.88965l-19.61035,15.68408v-15.68408h-21.5zM69.875,69.875v10.75h53.75v-10.75zM69.875,91.375v10.75h32.25v-10.75z"></path></g></g></svg>
+                          <h1>Digital advice</h1>
+                          <a href="">Start counseling</a>
+                          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                          width="40" height="20"
+                          viewBox="0 -50 172 172"
+                          style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#000000"><path d="M14.33333,93.16667h126.033l-23.59983,23.59983c-2.79858,2.79858 -2.79858,7.33508 0,10.13367c1.40108,1.40108 3.23217,2.09983 5.06683,2.09983c1.83467,0 3.66575,-0.69875 5.06683,-2.09983l35.83333,-35.83333c1.34375,-1.34017 2.09983,-3.16408 2.09983,-5.06683c0,-1.90275 -0.75608,-3.72308 -2.09983,-5.06683l-35.83333,-35.83333c-2.79858,-2.79858 -7.33508,-2.79858 -10.13367,0c-2.79858,2.79858 -2.79858,7.33508 0,10.13367l23.59983,23.59983h-126.033c-3.956,0 -7.16667,3.21067 -7.16667,7.16667c0,3.956 3.21067,7.16667 7.16667,7.16667z"></path></g></g></svg> 
+                    </div>
+              </div>
+        </div>
+  </section>
+
+  <section id="footer">
+    <div class="footer-container">
+          <div class="footer">
+                <div class="footer-content">
+                  <div class="footer-section">
+                    <h1>Gallexy Bikes</h1>
+                    <h2>© Copyright 2021, Star Bicycle
+                      all rights reserved</h2>
+                  </div>
+                  <div class="footer-section">
+                    <h3>Pages</h3>
+                    <ul>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Bikes</a></li>
+                      <li><a href="#">Service</a></li>
+                      <li><a href="">About us</a></li>
+                      <li><a href="">Contact</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-section">
+                        <h3> <br> </h3>
+                    <ul>
+                          <li><a href="">Digital consultant</a></li>
+                          <li><a href="">Location</a></li>
+                          <li><a href="">History</a></li>
+                          <li><a href="">Indian Bike School</a></li>
+                          <li><a href="">Bike tours</a></li>
+                          <li><a href=""></a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-section">
+                      <h3>Bike types</h3>
+                      <ul>
+                        <li><a href="#">Electric bikes</a></li>
+                        <li><a href="#">Mountain bikes</a></li>
+                        <li><a href="#">City bikes</a></li>
+                        <li><a href="">Racing bikes</a></li>
+                        <li><a href="">Gravel bikes</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-section">
+                      <h3>Contact</h3>
+                      <ul>
+                        <li><a href="#">052 290 50 44</a></li>
+                        <li><a href="#">info@galaxybicycle.com</a></li>
+                      </ul>
+                  </div>
+                </div>
+                <div class="footer-bottom">
+                      <h1><span>MADE BY</span>DEEPAK REDDY</h1>
+                </div>
+              </div>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $(".toggle").click(function() {
+
+$(this).toggleClass('on');
+$("#resize").toggleClass("active");
+
+});
+</script>
+
+</body>
+</html>
