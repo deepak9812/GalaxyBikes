@@ -1119,7 +1119,7 @@ nav #brand {
     }
     .footer-content{
         display: block;
-        padding: 0px 60px;
+        padding: 0px 30px;
         width: 40%;
     }
     .footer-section{
@@ -1139,7 +1139,7 @@ nav #brand {
         width: 200%;
     }
     .footer-section li {
-        line-height: 4rem;
+        line-height: 2.6rem;
     }
     .footer-section li a{
         font-size: 14px;
