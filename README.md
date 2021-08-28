@@ -7,6 +7,9 @@ In my opinion, websites should work similarly to the real ones by thoughtfully p
 
 Languages used HTML,CSS,JS,GSAP.
 
-From this I have learned how to use GSAP for animating. I have also used GSAP for Home page revealing.
+Things learned:
+1. GSAP for animation(Home Page revealing). 
+2. Hover Effeccts.
+3. Improved the skills.                                                                              
 
 
